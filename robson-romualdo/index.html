@@ -1,27 +1,36 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Calama Devs Apresentação</title>
     <link rel="stylesheet" href="css/style.css">
 </head>
+
 <body>
     <!-- cabeçalho -->
     <header>
         <nav>
-            <img src="/img/calama devs logo.png" alt="logo calama devs">
+            <img src="img/calama devs logo.png" alt="logo calama devs">
             <ul>
-                <li><a href="#"></a></li>
-                <li><a href="#"></a></li>
+                <li><a href="#">Início</a></li>
+                <li><a href="#">Contato</a></li>
             </ul>
         </nav>
     </header>
 
     <!-- conteudo principal -->
     <main>
-        <section>
-            <button>Clique aqui</button>
+        <section class="principal">
+            <h1>Faça parte de time de desenvolvimento do IFRO Campus Calama</h1>
+            <h2>Aqui você aprenderá:</h2>
+            <ul>
+                <li>Desenvolver projetos reais</li>
+                <li>Trabalhar em equipe</li>
+            </ul>
+            <p>Clique no botão abaixo para fazer sua inscrição. A inscrição é gratuita.</p>
+            <button id="btn-participar">Quero participar</button>
         </section>
     </main>
 
@@ -30,6 +39,63 @@
         <p>&copy; 2026 - Calama Devs Apresentação by Robson Romualdo</p>
     </footer>
 
+    <!-- modal-formulario -->
+    <dialog class="modal-formulario" aria-labelledby="titulo-form">
+        <button class="exit" aria-label="Fechar formulário" title="Fechar">X</button>
+
+        <form action="#" method="dialog">
+            <h2 id="titulo-form">Inscrição para o Grupo</h2>
+
+            <fieldset>
+                <legend>Dados Pessoais</legend>
+
+                <div class="field">
+                    <label for="nome">Nome Completo:</label>
+                    <input type="text" name="nome" id="nome" placeholder="Ex: Leandro Ferrarezi" required>
+                </div>
+
+                <div class="field">
+                    <label for="telefone">Telefone:</label>
+                    <input type="tel" name="telefone" id="telefone" placeholder="(99) 99999-9999">
+                </div>
+            </fieldset>
+
+            <fieldset>
+                <legend>Área de Interesse</legend>
+                <p>Escolha a área de desenvolvimento:</p>
+
+                <div class="radio-group">
+                    <input type="radio" id="front-end" name="area-dev" value="front">
+                    <label for="front-end">Front-end</label>
+                </div>
+
+                <div class="radio-group">
+                    <input type="radio" id="back-end" name="area-dev" value="back">
+                    <label for="back-end">Back-end</label>
+                </div>
+
+                <div class="radio-group">
+                    <input type="radio" id="ambos" name="area-dev" value="ambos">
+                    <label for="ambos">Ambos</label>
+                </div>
+            </fieldset>
+
+            <button type="submit" class="btn-enviar">Enviar Inscrição</button>
+        </form>
+    </dialog>
+
+    <!-- modal-enviado -->
+    <dialog class="modal-enviado" role="alert" aria-live="assertive">
+        <button class="exit" aria-label="Fechar alerta" title="Fechar">X</button>
+        <div class="modal-enviado-div">
+            <h2>Inscrição enviada com sucesso!</h2>
+            <p>Entraremos em contato para dar as orientações necessárias.</p>
+            <span class="sucesso" aria-hidden="true">✔</span>
+            <button class="close">Fechar</button>
+        </div>
+    </dialog>
+
     <script src="js/script.js"></script>
 </body>
+
 </html>
